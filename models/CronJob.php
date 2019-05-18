@@ -176,10 +176,10 @@ class CronJob extends \yii\db\ActiveRecord
         }
         
         if ($current->save()){
-            Console::stdout(Console::ansiFormat("*** running ".$current->controller."/".$current->action."\n", [Console::FG_YELLOW]));
+            // Console::stdout(Console::ansiFormat("*** running ".$current->controller."/".$current->action."\n", [Console::FG_YELLOW]));
             return $current;
         }else{
-            Console::stdout(Console::ansiFormat("*** failed to run ".$current->controller."/".$current->action."\n", [Console::FG_RED]));
+            // Console::stdout(Console::ansiFormat("*** failed to run ".$current->controller."/".$current->action."\n", [Console::FG_RED]));
             return false;
         }    
     }
@@ -193,10 +193,10 @@ class CronJob extends \yii\db\ActiveRecord
         $this->last_execution_time = self::execution_time();
         
         if ($this->save()){
-            Console::stdout(Console::ansiFormat("*** finished ".$this->controller."/".$this->action." (time: " . sprintf("%.3f", $this->last_execution_time) . "s)\n\n", [Console::FG_GREEN]));
+            //Console::stdout(Console::ansiFormat("*** finished ".$this->controller."/".$this->action." (time: " . sprintf("%.3f", $this->last_execution_time) . "s)\n\n", [Console::FG_GREEN]));
             return true;
         }else{
-            Console::stdout(Console::ansiFormat("*** failed to finish ".$this->controller."/".$this->action." (time: " . sprintf("%.3f", $this->last_execution_time) . "s)\n\n", [Console::FG_RED]));
+            //Console::stdout(Console::ansiFormat("*** failed to finish ".$this->controller."/".$this->action." (time: " . sprintf("%.3f", $this->last_execution_time) . "s)\n\n", [Console::FG_RED]));
             return false;
         }
     }

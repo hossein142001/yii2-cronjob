@@ -1,13 +1,13 @@
 {
-    "name": "fedemotta/yii2-cronjob",
+    "name": "hossein142001/yii2-cronjob",
     "description": "Yii2 extension to help in the creation of automated console scripts",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","cron","job","schedule","console","script","crontab"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Federico Nicolás Motta",
-            "email": "fedemotta@gmail.com"
+            "name": "hossein abaei",
+            "email": "hossein142001@gmail.com"
         }
     ],
     "require": {
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "fedemotta\\cronjob\\": ""
+            "hossein142001\\cronjob\\": ""
         }
     }
 }
